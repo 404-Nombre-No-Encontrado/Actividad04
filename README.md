@@ -6,10 +6,8 @@
 
 **Equipo**: 404: Nombre No Encontrado. 
 
-**Integrantes del equipo**: -Barajas Valencia Alejandro Jesús. 
-                        -Camarillo Amaya Juan Pablo. 
-                        -Ramirez Ruíz Misssael Salvador. 
-                                      
+
+**Integrantes**: Barajas Valencia Alejandro Jesús<br>Camarillo Amaya Juan Pablo<br>Ramirez Ruíz Misssael Salvador
 
 ## Introducción
 
@@ -26,10 +24,10 @@ Un aspecto matemático y lógico fundamental en esta simulación es el tratamien
 Desarrollar, parametrizar y simular exhaustivamente el módulo "RORO Supreme", logrando la integración exitosa de memorias ROM de datos y una ALU tipo MIPS, para comprobar el correcto flujo de información, la ejecución de instrucciones predefinidas y la validación de los resultados mediante un entorno de pruebas automatizado (Testbench).
 ### Objetivos Particulares:
 
-Modificar y adaptar la estructura original de los módulos RORO y ROM para que adquieran la capacidad de recibir parámetros estáticos (FILE, FILE_A, FILE_B), permitiendo la carga dinámica de vectores de prueba desde múltiples archivos de texto (.txt) sin alterar la lógica central.
+- Modificar y adaptar la estructura original de los módulos RORO y ROM para recibir parámetros estáticos (FILE, FILE_A, FILE_B), permitiendo la carga dinámica de vectores de prueba desde múltiples archivos de texto (.txt) sin alterar la lógica central.
 
-Interconectar el módulo de control de instrucciones (ROM_Instrucciones) con el núcleo de procesamiento de datos, asegurando la sincronía en el envío de operandos hacia la MIPSALU.
-Evaluar un set de 16 instrucciones continuas y comprobar matemáticamente que el diseño maneje correctamente desbordamientos aparentes (números negativos en complemento a dos) y levante la bandera de cero (ZF) cuando corresponda.
+- Interconectar el módulo de control de instrucciones (ROM_Instrucciones) con el núcleo de procesamiento de datos, asegurando la sincronía en el envío de operandos hacia la MIPSALU.
+- Evaluar un set de 16 instrucciones continuas y comprobar matemáticamente que el diseño maneje correctamente desbordamientos aparentes (números negativos en complemento a dos) y levante la bandera de cero (ZF) cuando corresponda.
 ### Alcances y Limitaciones:
 
 El alcance de este proyecto abarca exclusivamente la etapa de diseño de Transferencia de Registros (RTL) y la simulación funcional del circuito en software. Como limitación, el proyecto actual carece de un Program Counter (PC) autónomo real (siendo emulado por el banco de pruebas) y no contempla por el momento la síntesis física en una tarjeta de desarrollo, limitándose a verificar la consistencia lógica de la ruta de datos.
@@ -40,11 +38,11 @@ El desarrollo de esta actividad se llevó a cabo de manera metódica, dividiendo
 
 ### Estructura del Diseño:
 
-Implementamos una arquitectura jerárquica encabezada por el módulo RORO_Supreme. Dentro de este, instanciamos dos componentes principales:
+- Implementamos una arquitectura jerárquica encabezada por el módulo RORO_Supreme. Dentro de este, instanciamos dos componentes principales:
 
-ROM_Instrucciones: Encargado de leer el archivo instrucciones.txt y proporcionar el código de operación de 12 bits para cada ciclo.
+- ROM_Instrucciones: Encargado de leer el archivo instrucciones.txt y proporcionar el código de operación de 12 bits para cada ciclo.
 
-Núcleo RORO: Este submódulo empaqueta la lógica de procesamiento. En su interior, declaramos dos memorias ROM adicionales (Roma y Romina) que sirven como los bancos de registros temporales para los operandos A y B, y finalmente instanciamos la MIPSALU que ejecuta la operación indicada por los bits de control.
+- Núcleo RORO: Contiene dos memorias ROM de datos (Roma y Romina) que entregan los operandos A y B, y la MIPSALU, que ejecuta la operación indicada por los bits de control.
 
 
 
