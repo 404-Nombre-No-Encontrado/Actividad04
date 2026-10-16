@@ -1,7 +1,8 @@
 # Actividad04
 
-Reporte de Práctica: Simulación y Validación Arquitectónica del Módulo RORO Supreme
-Maestro: Jorge Ernesto López Arce Delgado 
+Reporte de Práctica: Simulación y Validación Arquitectónica del Módulo RORO Supreme.
+
+Maestro: Jorge Ernesto López Arce Delgado.
 Equipo: 404: Nombre No Encontrado. 
 Integrantes del equipo: -Barajas Valencia Alejandro Jesús. 
                         -Camarillo Amaua Juan Pablo. 
@@ -53,6 +54,7 @@ Nuestra simulación fue totalmente exitosa y libre de errores funcionales. Las s
 Para ahondar en el rigor técnico de la simulación, analizamos matemáticamente dos instantes específicos que prueban la robustez de la MIPSALU:
 Análisis de Resta Negativa (Complemento a Dos):
 Al llegar al ciclo de la instrucción 9, el testbench ordenó una resta cuyos operandos daban como resultado -41 (9 - 50).
+
 <img width="412" height="375" alt="3" src="https://github.com/user-attachments/assets/b38d0848-33d1-46d4-84d4-205bec17916b" />
 
 (Acercamiento a la gráfica en la dirección 9, donde se observe el valor -41 o 4294967255 en la salida DD).
