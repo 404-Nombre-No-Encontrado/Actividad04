@@ -7,7 +7,7 @@ Maestro: Jorge Ernesto López Arce Delgado.
 Equipo: 404: Nombre No Encontrado. 
 
 Integrantes del equipo: -Barajas Valencia Alejandro Jesús. 
-                        -Camarillo Amaua Juan Pablo. 
+                        -Camarillo Amaya Juan Pablo. 
                         -Ramirez Ruíz Misssael Salvador. 
                                       
 Introducción
@@ -58,10 +58,12 @@ Entorno de Simulación y Validación:
 Para verificar nuestro sistema, utilizamos el entorno RORO_Supreme_tb. Este testbench funciona inyectando las direcciones de memoria del 0 al 15 y compara en tiempo real el bus de salida de 32 bits (DD) y la bandera de cero (ZF) contra los valores ideales pre-calculados.
 
 A continuación, documentamos visualmente nuestra demostración de funcionalidad:
+
 <img width="429" height="325" alt="1" src="https://github.com/user-attachments/assets/2fc800c2-6a9f-4965-8499-87dcb036199a" />
 
 (Vista completa de la consola Transcript de ModelSim).
 Nuestra simulación fue totalmente exitosa y libre de errores funcionales. Las señales lógicas internas fluyeron correctamente de las memorias a la ALU.
+
 <img width="1132" height="365" alt="2" src="https://github.com/user-attachments/assets/115bf4a0-a942-44dd-a321-0d5e5294dc06" />
 
 (Gráfica general Wave con Zoom Full).
@@ -76,6 +78,7 @@ Al llegar al ciclo de la instrucción 9, el testbench ordenó una resta cuyos op
 
 Como equipo, validamos que el procesador no colapsa ante valores subcero. En su lugar, debido al límite arquitectónico de 32 bits, la ALU envuelve el valor aplicando el complemento a dos. El sistema interpretó el -41 correctamente, coincidiendo nuestra salida simulada con el valor gigante positivo (4294967255) predicho por la teoría computacional, o su equivalente decimal con signo.
 Análisis de la Bandera Zero Flag (ZF):
+
 <img width="371" height="309" alt="Captura de pantalla 2026-10-15 223405" src="https://github.com/user-attachments/assets/974221ed-4085-4590-ae24-8d737b313af3" />
 
 (Acercamiento a la gráfica, mostrando el resultado DD en 0 y el pulso de la señal ZF en 1).
