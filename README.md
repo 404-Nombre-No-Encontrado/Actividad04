@@ -10,6 +10,7 @@ Integrantes del equipo: -Barajas Valencia Alejandro Jesús.
                         -Camarillo Amaya Juan Pablo. 
                         -Ramirez Ruíz Misssael Salvador. 
                                       
+
 Introducción
 
 El diseño y validación de microprocesadores y sistemas digitales complejos requieren metodologías rigurosas de simulación antes de su implementación física en silicio o en arreglos de compuertas programables (FPGA). En esta práctica, nuestro equipo abordó la simulación de una arquitectura digital basada en los principios fundamentales de la arquitectura MIPS (Microprocessor without Interlocked Pipeline Stages). El marco teórico de nuestro trabajo se sustenta en la descripción de hardware mediante el lenguaje Verilog, utilizando herramientas de simulación de grado industrial como ModelSim.
